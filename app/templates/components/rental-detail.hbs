@@ -1,0 +1,11 @@
+Located in {{rental.city}}, this {{rental.bedrooms}} bedroom {{rental.type}} is
+available by arrangement through {{rental.owner}}.
+<br>
+{{#if isImageShowing }}
+   <p><img src={{rental.image}} alt={{rental.type}} {{action 'imageHide'}}></p>
+ {{else}}
+   <button {{action 'imageShow'}}>Show image</button>
+{{/if}}
+
+
+<button {{action 'delete' rental}}>Delete</button>

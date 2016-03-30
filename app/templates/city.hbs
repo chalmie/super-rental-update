@@ -1,0 +1,15 @@
+<h1> Welcome to {{model.name}} </h1>
+
+{{city-detail city=model deleteCity="deleteCity"}}
+<br>
+{{update-city city=model updateCity="updateCity"}}
+
+<ul>
+  {{#each model.rentals as |rental|}}
+     {{rental-tile rental=rental}}
+  {{/each}}
+</ul>
+
+
+
+{{new-rental saveRental="saveRental" city=model}}

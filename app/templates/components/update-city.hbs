@@ -1,0 +1,20 @@
+{{#if updateCityForm}}
+    <h1>Update City</h1>
+    <div>
+     <form>
+       <div class="form-group">
+         <label for="name">Name</label>
+         {{input value=name id="name"}}
+       </div>
+
+       <div class="form-group">
+         <label for="Country">Country</label>
+         {{input value=country id="country"}}
+       </div>
+
+       <button {{action 'updateCity' city}}>Update</button>
+     </form>
+    </div>
+ {{else}}
+    <button {{action 'updateCityForm'}}>Update City</button>
+{{/if}}
